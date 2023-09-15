@@ -12,9 +12,7 @@ const key = process.env.KEY;
 const cert = process.env.CERT;
 
 console.log(key + " KEY AND CERT " + cert);
-//key: fs.readFileSync('C:/Users/lab_services_student/APDS7311/apdsicetask2/server/keys/private-key.pem'),      //Change Private Key Path here
-  //cert: fs.readFileSync('C:/Users/lab_services_student/APDS7311/apdsicetask2/server/keys/certificate.pem'),            //Change Main Certificate Path here
-  
+
 const options = {
   key: fs.readFileSync(key), 
   cert: fs.readFileSync(cert),    
