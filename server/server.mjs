@@ -19,6 +19,7 @@ const options = {
 }
 
   import records from "./routes/record.mjs"; 
+  import users from "./routes/user.mjs"
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -27,11 +28,12 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/record", records);
+app.use("/user", users);
 
 let server = https.createServer(options,app)
 
-app.get('/',(req,res)=>{
-  res.send('HTTPS in ExpressJS')
+app.get('/record',(req,res)=>{
+  //res.send('HTTPS in ExpressJS YASSSSSS')
 })
 
 // start the Express server
